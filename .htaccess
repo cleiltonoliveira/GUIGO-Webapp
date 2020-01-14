@@ -8,3 +8,5 @@ DirectoryIndex index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 #Regra - aceita qualquer valor digitado na url e vai ser passado para o index.php
 RewriteRule ^(.*)$ /index.php?url=$1 [QSA,L]
+
+#Na index.php, o $_GET["url"] consegue guardar o que é digitado na url depois da primeira barra

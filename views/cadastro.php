@@ -8,8 +8,6 @@
     <div class="cadastro float center">
         <input class="float w100 h40" type="text" id="nome" name="nome" placeholder="Nome:" required>
         <input class="float w100 h40" type="email" id="email" name="email" placeholder="Email:" required>
-        <input class="float w100 h40" type="text" id="cpf" name="cpf" placeholder="CPF:" required>
-        <input class="float w100 h40" type="text" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento:" required>
         <input class="float w100 h40" type="password" id="senha" name="senha" placeholder="Senha:" required>
         <input class="float w100 h40" type="password" id="senhaConf" name="senhaConf" placeholder="Confirmação da Senha:" required>
         <input class="float w100 h40" type="text" id="guigoID" name="guigoID" placeholder="ID do produto" required>
