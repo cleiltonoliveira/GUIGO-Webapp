@@ -1,9 +1,9 @@
 <?php
 namespace Models;
 
-class ClassConexao{
+abstract class ClassConexao{
 
-    public function conectaDB()
+    protected function conectaDB()
     {
         try{
             $con=new \PDO("mysql:host=localhost;dbname=guigo_web","root","");

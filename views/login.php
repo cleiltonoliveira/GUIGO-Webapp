@@ -5,7 +5,7 @@
 <form name="formLogin" id="formLogin" action="<?php echo DIRPAGE.'controllers/controllerLogin'; ?>" method="post">
     <div class="login">
         <div class="loginLogomarca float w100 center">
-            <!--<img src="<?php #echo DIRPAGE.'img/guigo-logo.png'; ?>" alt="Logomarca da WEF"> -->
+            <img src="<?php echo DIRPAGE.'img/guigo-logo-branco.png'; ?>" alt="Logomarca da GUIGÓ">
         </div>
 
         <div class="loginFormulario float w100">
