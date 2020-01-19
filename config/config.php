@@ -29,6 +29,6 @@ define('DIRJS',DIRPAGE.'lib/js/');
 #Acesso ao db
 define('HOST',"localhost");
 #Nome do banco de dados
-define('DB',"sistema");
+define('DB',"guigo_web");
 define('USER',"root");
 define('PASS',"");

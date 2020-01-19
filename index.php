@@ -1,7 +1,9 @@
 <?php
-include("lib/vendor/autoload.php");
-include("config/config.php");
 header("Content-Type: text/html; charset=utf-8");
+include("config/config.php");
+include(DIRREQ."helpers/variables.php");
+include(DIRREQ."lib/vendor/autoload.php");
+
 #include(DIRREQ."lib/vendor/autoload.php");
 $dispatch=new Classes\ClassDispatch();
 include($dispatch->getInclusao());
@@ -17,12 +19,12 @@ $crud->insertDB(
     "users",
     "?,?,?,?,?,?",
     array(
-        $id=11,
-        $nome='Gustavo',
-        $email='gustavorodrigues.pr@outlook.com',
-        $senha='banana123',
-        $guigoID='40028922',
-        $dataCriacao=''
+        11,
+        'Gustavo',
+        'gustavorodrigues.pr@outlook.com',
+        'banana123',
+        '40028922',
+        ''
     )
-)*/  
+)*/
 ?>
