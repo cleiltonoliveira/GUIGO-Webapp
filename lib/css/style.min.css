@@ -65,3 +65,28 @@ input[type='submit']:hover{ opacity: 0.8; }
 @media screen and (min-width: 1200px){
 
 }
+
+.bodyHomepage {
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #d6cece;
+    color: green;
+    font-size: 30px;
+}
+
+.mainHomepage {
+    background: #00000040;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+
+.logo{
+    padding: auto; 
+    
+}

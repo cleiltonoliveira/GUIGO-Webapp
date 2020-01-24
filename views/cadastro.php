@@ -5,6 +5,7 @@
 </div>
 
 <form name="formCadastro" id="formCadastro" action="<?php echo DIRPAGE.'controllers/controllerCadastro'; ?>" method="post">
+    <div class="retornoCad"></div>
     <div class="cadastro float center">
         <input class="float w100 h40" type="text" id="nome" name="nome" placeholder="Nome:" required>
         <input class="float w100 h40" type="email" id="email" name="email" placeholder="Email:" required>

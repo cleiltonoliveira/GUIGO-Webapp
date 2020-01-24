@@ -32,3 +32,6 @@ define('HOST',"localhost");
 define('DB',"guigo_web");
 define('USER',"root");
 define('PASS',"");
+
+#Outras informções
+define("DOMAIN",$_SERVER["HTTP_HOST"]);

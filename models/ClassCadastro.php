@@ -8,7 +8,7 @@ class ClassCadastro extends ClassCrud{
     {
         $this->insertDB(
           "users",
-          "?,?,?,?,?,?,?",
+          "?,?,?,?,?,?",
                 array(
                     0,
                     $arrVar['nome'],
@@ -16,18 +16,20 @@ class ClassCadastro extends ClassCrud{
                     $arrVar['hashSenha'],
                     $arrVar['guigoID'],
                     $arrVar['dataCreate'],
-                    'confirmation'
                 )
         );
+    }
 
-        $this->insertDB(
-            "confirmation",
-                "?,?,?",
-                array(
-                    0,
-                    $arrVar['email'],
-                    $arrVar['token']
-                )
+    #Veriricar se já existe o mesmo email cadastro no db
+    public function getIssetEmail($email) {
+        $b=$this->selectDB(
+            "*",
+            "users",
+            "where email=?",
+            array(
+                $email
+            )
         );
+        return $r=$b->rowCount();
     }
 }

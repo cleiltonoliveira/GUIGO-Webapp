@@ -2,6 +2,11 @@
 namespace Classes;
 
 class ClassLayout{
+
+    public static function setHeadRestrito() {
+        $session = new ClassSessions;
+        $session->verifyInsideSession();    
+    }
     #Setar as tags do head
     public static function setHead($title, $description, $author="Gustavo Rodrigues")
     {
@@ -26,7 +31,8 @@ class ClassLayout{
     public static function setFooter()
     {
         #JAVASCRIPT
-        $html="<script src='".DIRPAGE."lib/js/vanilla-masker.min.js'></script>\n";
+        $html="<script src='".DIRPAGE."lib/js/zepto.min.js'></script>\n";
+        $html.="<script src='".DIRPAGE."lib/js/vanilla-masker.min.js'></script>\n";
         $html.="<script src='".DIRPAGE."lib/js/javascript.min.js'></script>\n";
         $html.="</body>\n";
         $html.="</html>";
