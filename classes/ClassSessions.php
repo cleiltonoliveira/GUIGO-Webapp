@@ -75,7 +75,7 @@ class ClassSessions{
     public function verifyInsideSession()
     {
         $this->verifyIdSessions();
-        if(!isset($_SESSION['login']) || !isset($_SESSION['permition']) || !isset($_SESSION['canary'])){
+        if(!isset($_SESSION['login']) || !isset($_SESSION['canary'])){
             $this->destructSessions();
             echo "
                 <script>

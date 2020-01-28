@@ -118,7 +118,7 @@ class ClassValidate{
     #Validação final do cadastro
     public function validateFinalCad($arrVar)
     {
-        if(count($this->getErro())>0){
+        if(count($this->getErro()) > 0){
             $arrResponse=[
                 "retorno"=>"erro",
                 "erros"=>$this->getErro()
@@ -139,11 +139,15 @@ class ClassValidate{
             $arrResponse=[
                 "retorno"=>"erro",
                 "erros"=>$this->getErro()
-            ];
-            return json_encode($arrResponse);
+            ];        
         }else{
-            return $this->session->setSessions($email);
+            $this->session->setSessions($email);
+            $arrResponse=[
+                "retorno"=>"success",
+                "page"=>"dashboard"
+            ];
         }
+        return json_encode($arrResponse);
     }
 }
 

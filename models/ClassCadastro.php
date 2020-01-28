@@ -8,13 +8,12 @@ class ClassCadastro extends ClassCrud{
     {
         $this->insertDB(
           "users",
-          "?,?,?,?,?,?",
+          "?,?,?,?,?",
                 array(
                     0,
                     $arrVar['nome'],
                     $arrVar['email'],
                     $arrVar['hashSenha'],
-                    $arrVar['guigoID'],
                     $arrVar['dataCreate'],
                 )
         );

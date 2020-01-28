@@ -7,12 +7,11 @@
         <div class="loginLogomarca float w100 center">
             <img src="<?php echo DIRPAGE.'img/guigo-logo-branco.png'; ?>" alt="Logomarca da GUIGÓ">
         </div>
-
+        <div class="resultadoForm float w100 center"></div>
         <div class="loginFormulario float w100">
             <input class="float w100 h40" type="email" name="email" id="email" placeholder="Email:" required>
             <input class="float w100 h40" type="password" name="senha" id="senha" placeholder="Senha:" required>
             <input class="float h40 center" type="submit" value="Entrar">
-            <div class="loginTextos float center"><a href="<?php echo DIRPAGE.'esqueci-minha-senha'; ?>">Esqueci minha senha</a></div>
         </div>
     </div>
 </form>

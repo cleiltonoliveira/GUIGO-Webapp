@@ -66,6 +66,8 @@ input[type='submit']:hover{ opacity: 0.8; }
 
 }
 
+.resultadoForm{margin-top: 20px; font-weight: bold; color:red; line-height: 20px;}
+
 .bodyHomepage {
     width: 95%;
     max-width: 800px;

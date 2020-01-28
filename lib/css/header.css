@@ -1,0 +1,23 @@
+.flex-dashboard header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background-color: #E6EAB9;
+    padding: 10px 30px;
+}
+img.sair{
+    height: 40px;
+    width: 30px;
+    
+}
+
+@media (max-width: 768px){
+    .flex-dashboard header a{
+        display:none;
+    }
+    .flex-dashboard header{
+        justify-content: flex-end;
+    }
+}

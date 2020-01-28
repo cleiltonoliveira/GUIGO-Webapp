@@ -1,0 +1,116 @@
+main{
+    display: block;
+    height: 100%;
+    background-color: white;
+    width: calc(100% - 300px);
+}
+main .main-content{
+    padding: 30px;
+    width: 100%;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+div.dashboard-content{
+    border: none;
+}
+div.dashboard-flex-parent{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.dashboard-box{
+    display: flex;
+    width: calc(100%-300px);
+    height: 600px;
+    max-width: 320px;
+    min-width: 320px;
+    min-height: 400px;
+    padding-top: 100px;
+    position: relative;
+    margin:0 280px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.dashboard-box-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 400px;
+    min-height: 300px;
+}
+div.dashboard-box:hover{
+    box-shadow: 0 0 1rem rgba(156, 156, 156,0.4)  ;
+
+}
+div.box-grafico{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+   
+}
+div.grafico{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+    background-color:white;
+}
+
+div.valor{
+   margin-bottom: 5.2rem;
+}
+
+@media screen and (min-width: 1000px){
+    div.dashboard-flex-parent{
+        display: flex;
+        max-height: 90%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    div.dashboard-box{
+        width: 30%;
+        max-width: 300px;
+        padding-top: 20px;
+        position: relative;
+        margin: 0 10px;
+        padding-bottom: 20px;
+        flex-direction: row;
+    }
+    .dashboard-box-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    main{
+        display: block;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+    }
+}

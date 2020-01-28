@@ -11,7 +11,6 @@
         <input class="float w100 h40" type="email" id="email" name="email" placeholder="Email:" required>
         <input class="float w100 h40" type="password" id="senha" name="senha" placeholder="Senha:" required>
         <input class="float w100 h40" type="password" id="senhaConf" name="senhaConf" placeholder="Confirmação da Senha:" required>
-        <input class="float w100 h40" type="text" id="guigoID" name="guigoID" placeholder="ID do produto" required>
         <input class="inlineBlock h40" type="submit" value="Cadastrar">
     </div>
 </form>
