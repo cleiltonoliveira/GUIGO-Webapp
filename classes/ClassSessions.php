@@ -3,6 +3,7 @@ namespace Classes;
 
 use Models;
 use Traits\TraitGetIp;
+use Classes\ClassPassword;
 
 class ClassSessions{
 
