@@ -41,7 +41,7 @@ class ClassValidate{
         if($i==0){
             return true;
         }else{
-            $this->setErro("Preencha todos os dados");
+            $this->setErro("Preencha todos os dados!");
             return false;
         }
     }
@@ -51,7 +51,7 @@ class ClassValidate{
         if(filter_var($par, FILTER_VALIDATE_EMAIL)) {
             return true;
         }else{
-            $this->setErro("Email inválido");
+            $this->setErro("Email inválido!");
             return false;
         }
     }
@@ -62,7 +62,7 @@ class ClassValidate{
 
         if($action==null){
             if($b > 0){
-                $this->setErro("Email já cadastrado");
+                $this->setErro("Email já cadastrado!");
                 return false;
             }else{
                 return true;
@@ -71,7 +71,7 @@ class ClassValidate{
             if($b > 0){
                 return true;
             }else{
-                $this->setErro("Email não cadastrado");
+                $this->setErro("Email não cadastrado!");
                 return false;
             }
         }
@@ -83,7 +83,7 @@ class ClassValidate{
         if($senha === $senhaConf){
             return true;
         }else{
-            $this->setErro("Senha diferente de confirmação de senha");
+            $this->setErro("Senha diferente de confirmação de senha!");
         }
     }
 
@@ -97,7 +97,7 @@ class ClassValidate{
             if($strength['score'] >= 3){
                 return true;
             }else{
-                $this->setErro("Utilize uma senha mais forte");
+                $this->setErro("Utilize uma senha mais forte!");
             }
         }else{
             /*login*/
@@ -105,19 +105,13 @@ class ClassValidate{
     }
 
     #Verificação da senha digitada com o hash no banco de dados
-    public function validateSenha($email,$senha,$par=null)
+    public function validateSenha($email,$senha)
     {
         if($this->password->verifyHash($email,$senha)){
             return true;
         }else{
-            if($par==null){
-                $this->setErro("Usuário ou senha inválidos");
-                return false;
-            }else{
-                $this->setErro("Senha atual inválida, tente novamente");
-                return false;
-            }
-
+            $this->setErro("Usuário ou Senha Inválidos!");
+            return false;
         }
     }     
 
@@ -151,39 +145,6 @@ class ClassValidate{
             $arrResponse=[
                 "retorno"=>"success",
                 "page"=>"dashboard"
-            ];
-        }
-        return json_encode($arrResponse);
-    }
-
-    public function validateFinalAltPerfil($email,$novoEmail,$nome) {
-        if(count($this->getErro())>0) {
-            $arrResponse=[
-                "retorno"=>"erro",
-                "erros"=>$this->getErro()
-            ];        
-        }else{
-            $this->cadastro->updateEmailNome($email,$novoEmail,$nome);
-            $arrResponse=[
-                "retorno"=>"success",
-                "page"=>"perfil"
-            ];
-            $this->session->setSessions($novoEmail);
-        }
-        return json_encode($arrResponse);
-    }
-
-    public function validateFinalAltSenha($hashNovaSenha,$email) {
-        if(count($this->getErro())>0) {
-            $arrResponse=[
-                "retorno"=>"erro",
-                "erros"=>$this->getErro()
-            ];        
-        }else{
-            $this->cadastro->updateSenha($hashNovaSenha,$email);
-            $arrResponse=[
-                "retorno"=>"success",
-                "page"=>"perfil"
             ];
         }
         return json_encode($arrResponse);

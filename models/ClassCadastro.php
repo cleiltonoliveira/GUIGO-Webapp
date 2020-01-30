@@ -19,31 +19,6 @@ class ClassCadastro extends ClassCrud{
         );
     }
 
-    public function updateEmailNome($email,$novoEmail,$nome){
-        $this->updateDB(
-            "users",
-            "email = ?, nome = ?",
-            "email = ?",
-            array(
-                $novoEmail,
-                $nome,
-                $email
-            )
-        );
-    }
-
-    public function updateSenha($hashNovaSenha,$email){
-        $this->updateDB(
-            "users",
-            "senha = ?",
-            "email = ?",
-            array(
-                $hashNovaSenha,
-                $email
-            )
-        );
-    }
-
     #Veriricar se já existe o mesmo email cadastro no db
     public function getIssetEmail($email) {
         $b=$this->selectDB(

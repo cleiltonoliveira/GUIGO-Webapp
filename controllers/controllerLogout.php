@@ -2,6 +2,6 @@
 $session=new Classes\ClassSessions();
 $session->destructSessions();
 echo "<script>
-    alert('Você efetuou logout');
+    alert('Você efetuou o logout!');
     window.location.href='".DIRPAGE."';
 </script>";
