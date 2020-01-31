@@ -5,6 +5,7 @@ use Models\ClassCadastro;
 use Classes\ClassSessions;
 use ZxcvbnPhp\Zxcvbn;
 use Classes\ClassPassword;
+use Models\ClassLogin;
 
 class ClassValidate{
 
@@ -12,11 +13,14 @@ class ClassValidate{
     private $cadastro;
     private $password;
     private $session;
+    private $login;
+    private $tentativas;
 
     public function __construct(){
         $this->cadastro=new ClassCadastro();
         $this->password=new ClassPassword();
         $this->session=new ClassSessions();
+        $this->login=new ClassLogin();
     }
 
     public function getErro()
@@ -119,6 +123,18 @@ class ClassValidate{
             }
 
         }
+    }
+    #Validação das tentativas
+    public function validateAttemptLogin()
+    {
+        if($this->login->countAttempt() >= 5){
+            $this->setErro("Você realizou mais de 5 tentativas, entre em contato com o suporte.");
+            $this->tentativas=true;
+            return false;
+        }else{
+            $this->tentativas=false;
+            return true;
+        }
     }     
 
     #Validação final do cadastro
@@ -142,15 +158,20 @@ class ClassValidate{
     #Validação final do login
     public function validateFinalLogin($email){
         if(count($this->getErro())>0) {
+            $this->login->insertAttempt();
             $arrResponse=[
                 "retorno"=>"erro",
-                "erros"=>$this->getErro()
+                "erros"=>$this->getErro(),
+                "tentativas"=>$this->tentativas
             ];        
         }else{
+            $this->login->deleteAttempt();
             $this->session->setSessions($email);
+
             $arrResponse=[
                 "retorno"=>"success",
-                "page"=>"dashboard"
+                "page"=>"dashboard",
+                "tentativas"=>$this->tentativas
             ];
         }
         return json_encode($arrResponse);
