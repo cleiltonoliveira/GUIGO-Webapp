@@ -21,19 +21,31 @@ echo $html;
                 </li>
                 <li>
                     <img src="../img/CE.png">
-                    <a href="#">VARIAVEIS</a>
+                    <a href="<?php echo DIRPAGE.'views/dashboard'; ?>">VARIAVEIS</a>
                 </li>
                 <li>
                     <img src="../img/temp_50per.png">
-                    <a href="#">TEMPERATURA</a>
+                    <a href="<?php echo DIRPAGE.'views/temperatura'; ?>">TEMPERATURA</a>
                 </li>
                 <li>
                     <img src="../img/Humidade_50per.png">
-                    <a href="#">UMIDADE</a>
+                    <a href="<?php echo DIRPAGE.'views/umidade'; ?>">UMIDADE</a>
                 </li>
                 <li>
                     <img src="../img/Luminosidade_50per.png">
-                    <a href="#">LUMINOSIDADE</a>
+                    <a href="<?php echo DIRPAGE.'views/luminosidade'; ?>">LUMINOSIDADE</a>
+                </li>
+                <li>
+                    <img src="../img/ph_50per.png">
+                    <a href="<?php echo DIRPAGE.'views/ph'; ?>">PH</a>
+                </li>
+                <li>
+                    <img src="../img/Os2_50per.png">
+                    <a href="<?php echo DIRPAGE.'views/o2'; ?>">O2</a>
+                </li>
+                <li>
+                    <img src="../img/CE_50per.png">
+                    <a href="<?php echo DIRPAGE.'views/ce'; ?>">CE</a>
                 </li>
                 <li class="sidebar_logout">
                     <img src="../img/seta_voltar.png">
@@ -45,8 +57,7 @@ echo $html;
     <main id="mainContent">
         <header>
             <img src="../img/menu_icon.png" class="icon_menu" id="icon_menu" onclick="resposivesidebar()">
-            <a href="<?php echo DIRPAGE.'controllers/controllerLogout'; ?>"><img src="../img/seta_voltar.png" class="sair">SAIR</a>
-                        
+            <a href="<?php echo DIRPAGE.'controllers/controllerLogout'; ?>"><img src="../img/seta_voltar.png" class="sair">SAIR</a>                
         </header>
         <div class="main-content">
             <p>ALTERAR SENHA</p>

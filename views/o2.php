@@ -1,11 +1,6 @@
 <?php \Classes\ClassLayout::setHeadRestrito(); ?>
 
-<?php \Classes\ClassLayout::setHead('Dashboard','Acompanhe as variáveis do sistema'); 
-$html=" <link rel='stylesheet' href='".DIRPAGE."lib/css/all.css'>\n";
-$html.=" <link rel='stylesheet' href='".DIRPAGE."plugins/bootstrap-4.4.1-dist/css/bootstrap.min.css'>\n";
-$html.=" <script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0'></script>\n";
-echo $html;
-?>
+<?php \Classes\ClassLayout::setHeadDashboard('Dashboard','Acompanhe as variáveis do sistema'); ?>
 
 <div class="flex-dashboard">
     <sidebar id="sidebar">
@@ -60,28 +55,77 @@ echo $html;
             <a href="<?php echo DIRPAGE.'controllers/controllerLogout'; ?>"><img src="../img/seta_voltar.png"class="sair">SAIR</a>
         </header>
         <div class="main-content">
-            <p>PERFIL</p>
+            <p>DASHBOARD</p>
+
 
             <div class="dashboard-content">
-                <form name="formAlterarPerfil" id="formAlterarPerfil"
-                    action="<?php echo DIRPAGE.'controllers/controllerPerfil'; ?>" method="post">
-                    <div class="retornoAltPerfil"></div>
-                    <div class="cadastro float center">
-                        Nome do Usuário:<br>
-                        <input class="float w100 h40" type="text" id="nome" name="nome" placeholder="Nome:"
-                            value="<?php echo $_SESSION["name"]; ?>" required>
-                        Email:<br>
-                        <input class="float w100 h40" type="email" id="novoEmail" name="novoEmail" placeholder="Email:"
-                            value="<?php echo $_SESSION["email"]; ?>" required>
-                        <input class="float w100 h40" type="hidden" id="email" name="email"
-                            value="<?php echo $_SESSION["email"]; ?>" required>
-                        <input class="inlineBlock h40" type="submit" value="Alterar">
+                <div class="dashboard-flex-parent">
+
+
+                    <div class="dashboard-box">
+                        <div class="dashboard-box-wrapper">
+                            <div class="box-icon">
+                                <img src="../img/Os2_50per.png">
+
+                            </div>
+                            <div class="valor">
+                                <span id="name-v">O2</span><br>
+                                <span id="value-var">0</span>° %
+
+                            </div>
+                            <div class="box-grafico">
+                                <canvas id="graph" width="400" height="400"></canvas>
+
+                            </div>
+                        </div>
                     </div>
-                </form>
-                <br><a href="<?php echo DIRPAGE.'views/alterarSenha'; ?>">Alterar a senha</a>
+
+                </div>
             </div>
         </div>
     </main>
 </div>
+<?php
+    $html="<script src='".DIRPAGE."plugins/bootstrap-4.4.1-dist/js/bootstrap.min.js'></script>\n";
+    $html.="<script src='https://canvasjs.com/assets/script/jquery-1.11.1.min.js'></script>";
+    $html.="<script src='https://canvasjs.com/assets/script/jquery.canvasjs.min.js'></script>";
+    $html.="<script src='".DIRPAGE."lib/js/menu.js'></script>\n";
+    $html.="<script src='".DIRPAGE."lib/js/graficos.js'></script>\n";
+    $html.="<script src='".DIRPAGE."lib/js/guigoweb.js'></script>\n";
+    
+    $html.="<script src='".DIRPAGE."lib/js/grafico1.js'></script>\n";
+    $html.="<script src='".DIRPAGE."lib/js/grafico2.js'></script>\n";
+    $html.="<script src='".DIRPAGE."lib/js/grafico3.js'></script>\n";
+    echo $html;
+    ?>
+<script>
+    var ctx = document.getElementById('graph').getContext('2d');
+    var chart1 = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: [],
+            datasets: [{
+                label: '',
+                borderColor: 'rgb(35, 107, 35)',
+                data: []
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+<script src="js/page.js"></script>
 
 <?php \Classes\ClassLayout::setFooter(); ?>
