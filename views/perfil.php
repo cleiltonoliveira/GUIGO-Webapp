@@ -83,5 +83,9 @@ echo $html;
         </div>
     </main>
 </div>
+<?php
+$html="<script src='".DIRPAGE."lib/js/menu.js'></script>\n";
+echo $html;
+?>
 
 <?php \Classes\ClassLayout::setFooter(); ?>

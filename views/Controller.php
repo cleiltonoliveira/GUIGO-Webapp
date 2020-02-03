@@ -1,5 +1,5 @@
 <?php
-require_once("ClassConexao.php");
+require_once("models/ClassConexao.php");
 
 /******************************************
  Verifica se houve uma solicitação AJAX, 

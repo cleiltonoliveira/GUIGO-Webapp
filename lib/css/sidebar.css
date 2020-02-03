@@ -59,7 +59,7 @@ img.icon_menu:hover{
 
 
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     sidebar{
         position: absolute;
         left: 0px;

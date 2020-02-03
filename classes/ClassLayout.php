@@ -27,7 +27,8 @@ class ClassLayout{
         $html.="<body>\n";
         echo $html;
     }
-    public static function setHeadDashboard($title, $description, $author="Gustavo Rodrigues"){
+
+    public static function setHeadDashboard($title, $description, $author="Caio e Iuri"){
         $html="<!doctype html>\n";
         $html.="<html lang='pt-br'>\n";
         $html.="<head>\n";
@@ -35,7 +36,6 @@ class ClassLayout{
         $html.="    <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n";
         $html.="    <meta name='description' content='$description'>\n";
         $html.="    <meta name='author' content='$author'>\n";
-        $html.="    <meta name='format-detection' content='telephone=no'>\n";
         $html.="    <meta http-equiv='X-UA-Compatible' content='ie=edge'>\n";
         $html.="<title>$title</title>\n";
         $html.="    <link rel='stylesheet' href='".DIRPAGE."lib/css/all.css'>\n";
