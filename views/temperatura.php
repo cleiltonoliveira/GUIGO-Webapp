@@ -92,7 +92,7 @@
     $html.="<script src='https://canvasjs.com/assets/script/jquery.canvasjs.min.js'></script>";
     $html.="<script src='".DIRPAGE."lib/js/menu.js'></script>\n";
     $html.="<script src='".DIRPAGE."lib/js/graficos.js'></script>\n";
-    $html.="<script src='".DIRPAGE."lib/js/guigoweb.js'></script>\n";
+    $html.="<script src='".DIRPAGE."lib/js/page.js'></script>\n";
     
     $html.="<script src='".DIRPAGE."lib/js/grafico1.js'></script>\n";
     $html.="<script src='".DIRPAGE."lib/js/grafico2.js'></script>\n";

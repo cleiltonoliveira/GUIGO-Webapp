@@ -1,5 +1,7 @@
 <?php
-class Connection {
+namespace Models;
+
+class ClassConexaoSlave {
 	
 	// DADOS DE ACESSO.
 	private $con;
