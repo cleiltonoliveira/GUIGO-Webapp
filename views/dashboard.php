@@ -16,7 +16,7 @@
                 </li>
                 <li>
                     <img src="../img/CE.png">
-                    <a href="<?php echo DIRPAGE.'views/dashboard'; ?>">VARIAVEIS</a>
+                    <a href="<?php echo DIRPAGE.'dashboard'; ?>">VARIAVEIS</a>
                 </li>
                 <li>
                     <img src="../img/temp_50per.png">
