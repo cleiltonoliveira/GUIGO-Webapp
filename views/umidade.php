@@ -95,10 +95,7 @@
     $html.="<script src='".DIRPAGE."lib/js/menu.js'></script>\n";
     $html.="<script src='".DIRPAGE."lib/js/graficos.js'></script>\n";
     $html.="<script src='".DIRPAGE."lib/js/page.js'></script>\n";
-    
-    $html.="<script src='".DIRPAGE."lib/js/grafico1.js'></script>\n";
-    $html.="<script src='".DIRPAGE."lib/js/grafico2.js'></script>\n";
-    $html.="<script src='".DIRPAGE."lib/js/grafico3.js'></script>\n";
+
     echo $html;
     ?>
 <script>
@@ -129,6 +126,5 @@
         }
     });
 </script>
-<script src="js/page.js"></script>
 
 <?php \Classes\ClassLayout::setFooter(); ?>
