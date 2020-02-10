@@ -46,7 +46,7 @@ class Controller {
 	public function insertDB($temperatura, $umidade, $luminosidade, $ph, $o2, $ce) {
 		
 		$json;
-		$sql = "INSERT INTO ambient(temperatura, umidade, luminosidade, ph, o2, ce) VALUES (". $temperatura .",". $umidade .", ". $luminosidade .",". $ph .",". $o2 .",". $ce .")";
+		$sql = "INSERT INTO ambient(cultures_codCultura,temperatura, umidade, luminosidade, ph, o2, ce) VALUES (1,". $temperatura .",". $umidade .", ". $luminosidade .",". $ph .",". $o2 .",". $ce .")";
 		if($this->con->execute($sql)) {
 			$json = array(
 				'error' => 'false',

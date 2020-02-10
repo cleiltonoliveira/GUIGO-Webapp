@@ -10,6 +10,8 @@ sidebar{
     height: 100%;
     width: 300px;
     background-color: #E6EAB9;
+    z-index: 2;
+    min-width: 300px;
 }
 sidebar .sidebar-title{
     display: flex;
