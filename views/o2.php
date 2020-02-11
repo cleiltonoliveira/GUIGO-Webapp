@@ -12,35 +12,35 @@
             <ul>
                 <li>
                     <img src="../img/Desktop_Guigó_400px.png">
-                    <a href="<?php echo DIRPAGE.'views/perfil'; ?>">PERFIL</a>
+                    <a href="<?php echo DIRPAGE.'perfil'; ?>">PERFIL</a>
                 </li>
                 <li>
                     <img src="../img/CE.png">
-                    <a href="<?php echo DIRPAGE.'views/dashboard'; ?>">VARIAVEIS</a>
+                    <a href="<?php echo DIRPAGE.'dashboard'; ?>">VARIAVEIS</a>
                 </li>
                 <li>
                     <img src="../img/temp_50per.png">
-                    <a href="<?php echo DIRPAGE.'views/temperatura'; ?>">TEMPERATURA</a>
+                    <a href="<?php echo DIRPAGE.'temperatura'; ?>">TEMPERATURA</a>
                 </li>
                 <li>
                     <img src="../img/Humidade_50per.png">
-                    <a href="<?php echo DIRPAGE.'views/umidade'; ?>">UMIDADE</a>
+                    <a href="<?php echo DIRPAGE.'umidade'; ?>">UMIDADE</a>
                 </li>
                 <li>
                     <img src="../img/Luminosidade_50per.png">
-                    <a href="<?php echo DIRPAGE.'views/luminosidade'; ?>">LUMINOSIDADE</a>
+                    <a href="<?php echo DIRPAGE.'luminosidade'; ?>">LUMINOSIDADE</a>
                 </li>
                 <li>
                     <img src="../img/ph_50per.png">
-                    <a href="<?php echo DIRPAGE.'views/ph'; ?>">PH</a>
+                    <a href="<?php echo DIRPAGE.'ph'; ?>">PH</a>
                 </li>
                 <li>
                     <img src="../img/Os2_50per.png">
-                    <a href="<?php echo DIRPAGE.'views/o2'; ?>">O2</a>
+                    <a href="<?php echo DIRPAGE.'o2'; ?>">O2</a>
                 </li>
                 <li>
                     <img src="../img/CE_50per.png">
-                    <a href="<?php echo DIRPAGE.'views/ce'; ?>">CE</a>
+                    <a href="<?php echo DIRPAGE.'ce'; ?>">CE</a>
                 </li>
                 <li class="sidebar_logout">
                     <img src="../img/seta_voltar.png">
@@ -92,6 +92,7 @@
     $html.="<script src='".DIRPAGE."lib/js/menu.js'></script>\n";
     $html.="<script src='".DIRPAGE."lib/js/graficos.js'></script>\n";
     $html.="<script src='".DIRPAGE."lib/js/page.js'></script>\n";
+
     echo $html;
     ?>
 <script>
