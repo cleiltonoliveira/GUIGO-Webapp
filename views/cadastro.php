@@ -13,6 +13,9 @@
         <input class="float w100 h40" type="password" id="senhaConf" name="senhaConf" placeholder="Confirmação da Senha:" required>
         <input class="inlineBlock h40" type="submit" value="Cadastrar">
     </div>
+    <div class="retornoCad float w100 center">
+    <br><a href="<?php echo DIRPAGE.'login'; ?>">Fazer login</a>
+    </div>
 </form>
 
 <?php \Classes\ClassLayout::setFooter(); ?>
